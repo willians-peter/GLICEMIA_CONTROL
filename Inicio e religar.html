@@ -19,7 +19,7 @@
       <li><a href="#Calculadora">Calculadora</a>
       <ul class="submenu">
           <li><a href="Inicio e religar.html">Inicío</a></li>
-          <li><a href="#Manutencao">Manutenção</a></li>
+          <li><a href="Index.html">Manutenção</a></li>
           <li><a href="Inicio e religar.html">Religar</a></li>
         </ul>
       </li>
@@ -32,26 +32,36 @@
     </ul>
   </nav>
 
-<p id="Inicio">
-    <b>Inicío: </b>
-      <p>Insira o valor de HGT para iniciar o protocolo (mg/dl)</p>
-    <br>
-  <input type="text" id="valorHGTinicio" name="valorHGTinicio" placeholder="Inserir">
-  <button id="calcular">Calcular</button>
+<!-- INICIO -->
 
-    </p>
-    <p id="Religar">
-    <B>Religar.</b>
-    <p>Inserir a ulttima vazão:</p>
-    <br>
-      <input type="text" id="ultimaVazao" name="ultimaVazao" placeholder="Inserir">
-    <br>
-    <p>Inserir o valor de HGT atual (mg/dl):</p>
-    <br>
-    <input type="text" id="HGTReligar" name="HGTReligar" placeholder="Inserir">
-    
-    <div class="container">
+  <div class="container-formulario"></div>
+  <h2>Início</h2>
+  <p>Insira o valor de HGT para iniciar o protocolo (mg/dl)</p>
+  <input type="number" id="valorHGTinicio" name="valorHGTinicio" placeholder="Inserir">
+  <button id="calcular-inicio">Calcular</button>
+  
+  <div class="container">
   <div class="caixa-mensagem">
     <p><div id="mensagem"></div></p>
   </div>
+  
+  <!-- RELIGAR-->
+
+</p>
+    <p id="titulo-religar">
+    <B>Religar.</b>
+    <p>Inserir a ulttima vazão:</p>
+
+      <input type="number" id="ultimaVazao" name="ultimaVazao" placeholder="Inserir">
+
+    <p>Inserir o valor de HGT atual (mg/dl):</p>
+     <input type="number" id="HGTReligar" name="HGTReligar" placeholder="Inserir">
+    
+      <button id="calcular-religar">Calcular</button>
+    
+    <div class="container">
+  <div class="caixa-mensagem">
+    <p><div id="mensagem-religar"></div></p>
+  </div>
+  <br>
   <script src="JavaScript.js"></script>
