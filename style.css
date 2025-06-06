@@ -80,6 +80,10 @@
         padding-left: 20px;
     }
 }
+
+/* campos */
+
+
 p {
   font-family: 'Courier New', Courier, monospace, sans-serif;
   font-size: 18px;
@@ -98,33 +102,56 @@ b {
   margin-bottom: 20px;
   padding: 10px;
 }
+
+h2 {
+  font-family: 'Courier New', Courier, monospace, sans-serif;
+  font-size: 18px;
+  color: #0e1fbb;
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  padding: 10px;
+}
 .menu-itens li.ativo > a {
   background-color: #2c6f9e;
   border-radius: 5px;
 }
-input[type="text"] {
-  width: 30%;
+
+
+.campo-inserir {
+  width: 40%;
   height: 40px;
   padding: 10px;
   font-size: 16px;
-  border: 2px solid #ccc;
+  border: 2px solid #164caf;
   border-radius: 5px;
   box-sizing: border-box;
   text-align: center;
-  display: block; 
   margin: 0 auto;
+  
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/*<div class="container-formulario"> */
 
-  #valorHGTinicio {
-  width: 200px;
-  height: 30px;
-  padding: 10px;
-  font-size: 16px;
-  text-align: center;
+.container-formulario {
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-}
+
 .container {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .caixa-mensagem {
@@ -133,4 +160,28 @@ input[type="text"] {
   padding: 10px;
   width: 300px;
   display: inline-block;
+}
+
+
+.titulo {
+  /* estilos para o título */
+}
+
+.descricao {
+  /* estilos para a descrição */
+}
+
+
+.botao-calcular {
+  /* estilos para o botão de calcular */
+  max-width: 30px; /* largura máxima de 800 pixels */
+  width: 100%; /* largura de 100% da largura do elemento pai */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#calcular {
+  display: block;
+  margin: 0 auto;
 }
