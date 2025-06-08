@@ -136,9 +136,9 @@ p, h1, h2, b, footer {
 
 /* === CAMPOS DE INSERÇÃO === */
 .campo-inserir {
-    width: 40%;
-    height: 40px;
-    padding: 10px;
+    width: 60%;
+    height: 60px;
+    padding: 20px;
     font-size: 16px;
     border: 2px solid #164caf; /* Azul escuro */
     border-radius: 5px;
