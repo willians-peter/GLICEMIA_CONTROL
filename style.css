@@ -1,72 +1,200 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Protocolo de Insulina</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <nav class="menu">
-    <div class="menu-hamburguer">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <ul class="menu-itens">
-      
-     <li><a href="Advertencia.html">Advertência</a></li> 
-      <li><a href="#Calculadora">Calculadora</a>
-      <ul class="submenu">
-          <li><a href="Inicio e religar.html">Inicío</a></li>
-          <li><a href="#Manutencao">Manutenção</a></li>
-          <li><a href="Inicio e religar.html">Religar</a></li>
-        </ul>
-      </li>
-      <li><a href="SobreProtocolo.html">Sobre o protocolo</a>
-                <ul class="submenu">
-          <li><a href="Hiperglicemia.html">Sinais Hiperglicemia</a></li>
-          <li><a href="Hipoglicemia.html">Sinais Hipoglicemia</a></li>
-        </ul>
-          </ul>
-  </nav>
-  
+.menu {
+ background-color: #3497d1;
+ padding: 1em;
+ text-align: center;
+ border-radius: 1mm;
+}
 
-  <!---MANUTENÇÃO--> 
-<p id="Calculadora">
-  <p>Consulte as informações em "Advertência" e sobre o protocolo antes de utilizar a calculadora.</p>
-      
-</h1>
-    <h1 id="Manutencao">
-    <b>Manutenção: </b>
-    <h1>Valor atual de HGT (mg/dl)</h1>
-    <br>
-  <input type="text" id="HgtAtual" name="HgtAtual" placeholder="Inserir o valor atual de HGT">
-  <br>
-   <h1>Manutenção: Inserir o valor anterior de HGT (mg/dl).</h1>
-    <br>
-  <input type="text" id="HgtAnterior" name="HgtAnterior" placeholder="Inserir o valor anterior de HGT">
-  <br>
-     <h1>Manutenção: Inserir a vazão atual (ml/hr).</h1>
-     <br>
-  <input type="text" id="VazaoAtual" name="VazaoAtual" placeholder="Inserir a vazão atual (ml/hr)">
-   <button id="DiferencaHgt">Calcular</button>
-   </h1>
-     
-  <div class="container">
-  <div class="caixa-mensagem">
-    <h1><div id="mensagem-manutencao"></div></h1>
-  </div>
-</div>
-  <footer>
-  <div id="Contato">
-    <p>Para sugestões, entre em contato:</p>
-    <p><a href="mailto:contato@projeto.com.br">contato@projeto.com.br</a></p>
-    <p>&copy; Peter Willian's Cipriano. Todos os direitos reservados.</p>
-  </div>
-</footer>
-  <script src="JavaScript.js"></script>
-</body>
-</html>
+.menu-hamburguer {
+ display: none;
+ cursor: pointer;
+}
 
-    
+.menu-hamburguer span {
+ display: block;
+ width: 30px;
+ height: 3px;
+ background-color:#0e1fbb;
+ margin-bottom: 5px;
+}
+
+.menu-itens {
+ display: none; /* Oculta os itens do menu por padrão */
+ list-style: none;
+ margin: 0;
+ padding: 0;
+ display: flex;
+ justify-content: space-between;
+}
+
+.menu-itens li {
+position: relative;
+}
+
+.menu-itens a {
+ color: #fff;
+ text-decoration: none;
+ padding: 1em;
+ display: block;
+}
+
+.submenu {
+ display: none;
+ position: absolute;
+ background-color: #3497d1;
+ padding: 1em;
+ list-style: none;
+ margin: 0;
+ padding: 0;
+ border-radius: 15%;
+}
+
+.submenu li {
+margin-bottom: 10px;
+}
+
+.menu-itens li:hover .submenu {
+display: block;
+}
+
+@media (max-width: 768px) {
+ .menu-hamburguer {
+        display: block !important; /* Garante que apareça */
+        cursor: pointer;
+        position: relative;
+        z-index: 9999; /* Garante que fique na frente */
+
+ }
+ 
+ .menu-itens {
+ display: none;
+ flex-direction: column;
+ align-items: center;
+
+ }
+ 
+ .menu-itens li {
+ margin-bottom: 10px;
+ }
+ 
+.menu-itens.menu-aberto {
+display: flex;
+flex-direction: column;
+}
+ .submenu {
+ position: static;
+ padding-left: 20px;
+}
+}
+p {
+font-family: 'Courier New', Courier, monospace, sans-serif;
+font-size: 18px;
+color: #0e1fbb;
+text-align: center;
+line-height: 1.5;
+margin-bottom: 20px;
+padding: 10px;
+max-width: 90%;
+}
+b {
+font-family: 'Courier New', Courier, monospace, sans-serif;
+font-size: 50px;
+color: #0e1fbb;
+text-align: center;
+line-height: 1.5;
+margin-bottom: 20px;
+padding: 10px;
+max-width: 90%;
+}
+.menu-itens li.ativo > a {
+  background-color: #2c6f9e;
+  border-radius: 5px;
+}
+
+
+
+/* === AJUSTE GERAL DO LAYOUT === */
+body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 90%;
+}
+
+/* === CAMPOS DE TEXTO E TITULOS === */
+p, h1, h2, b, footer {
+    font-family: 'Courier New', Courier, monospace;
+    color: #3497d1; /* Azul padrão */
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    padding: 10px;
+    max-width: 90%;
+}
+
+/* === CAMPOS DE INSERÇÃO === */
+.campo-inserir {
+    width: 80%;
+    height: 80px;
+    padding: 10px;
+    font-size: 20px;
+    border: 2px solid #164caf; /* Azul escuro */
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+/* === CONTAINERS PARA CENTRALIZAR CONTEÚDO === */
+.container-formulario, .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 99%;
+}
+
+/* === CAIXA DE MENSAGEM === */
+.caixa-mensagem {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 300px;
+    display: inline-block;
+    max-width: 99%;
+    font-family: 'Courier New', Courier, monospace;
+    color: #3497d1; /* Azul padrão */
+}
+
+input {
+    display: block; /* Faz o input ocupar sua própria linha */
+    margin-left: auto; /* Centraliza o input se for menor que a largura total */
+    margin-right: auto; /* Centraliza o input se for menor que a largura total */
+    margin-bottom: 5px; /* Espaço abaixo de cada campo de input */
+    max-width: 90%;
+    width: 300px;
+    height: 50px
+   
+}
+
+/* === BOTÃO DE CALCULAR === */
+.botao-calcular {
+    max-width: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 50px
+}
+
+
+/* === AJUSTE PARA O BOTÃO DE CALCULAR === */
+#calcular {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    white-space: normal; /* Evita cortes */
+}
