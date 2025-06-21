@@ -42,6 +42,9 @@ function calcularDoisDelta(vazaoAtual) {
 
 // --- FIM DAS FUNÇÕES DE DELTA ---
 
+function parseDecimal(value) {
+  return parseFloat(value.replace(",", "."));
+}
 
 // Funcionalidade para o menu de hambúrguer
 const menuHamburguer = document.querySelector('.menu-hamburguer');
@@ -209,7 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
         calcularManutencaoButton.addEventListener('click', () => {
             const hgtAtual = parseFloat(hgtAtualInput.value);
             const hgtAnterior = parseFloat(hgtAnteriorInput.value);
-            const vazaoAtual = parseFloat(vazaoAtualInput.value);
+            const vazaoAtual = parseDecimal(vazaoAtualInput.value);
 
             // Validação de inputs
             if (isNaN(hgtAtual) || isNaN(hgtAnterior) || isNaN(vazaoAtual) || vazaoAtual < 0) {
