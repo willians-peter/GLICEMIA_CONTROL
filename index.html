@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Protocolo de Insulina</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <nav class="menu">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocolo de Insulina</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+  <body>
+    <nav class="menu">
     <div class="menu-hamburguer">
       <span></span>
       <span></span>
@@ -29,27 +29,25 @@
           <li><a href="Hipoglicemia.html">Sinais Hipoglicemia</a></li>
         </ul>
           </ul>
-  </nav>
-  
-
-  <!---MANUTENÇÃO--> 
-<p id="Calculadora">
+      </nav>
+    <!---MANUTENÇÃO--> 
+  <p id="Calculadora">
   <p>Consulte as informações em "Advertência" e sobre o protocolo antes de utilizar a calculadora.</p>
       
-</h1>
+  </h1>
     <h1 id="Manutencao">
     <b>Manutenção: </b>
     <h1>Valor atual de HGT (mg/dl)</h1>
     <br>
-  <input type="text" id="HgtAtual" name="HgtAtual" placeholder="Inserir o valor atual de HGT">
+  <input type="text" id="HgtAtual" name="HgtAtual" placeholder="Inserir o valor atual">
   <br>
-   <h1>Manutenção: Inserir o valor anterior de HGT (mg/dl).</h1>
+   <h1>Inserir o valor anterior de HGT (mg/dl).</h1>
     <br>
-  <input type="text" id="HgtAnterior" name="HgtAnterior" placeholder="Inserir o valor anterior de HGT">
+  <input type="text" id="HgtAnterior" name="HgtAnterior" placeholder="Inserir o valor anterior">
   <br>
-     <h1>Manutenção: Inserir a vazão atual (ml/hr).</h1>
+     <h1>Inserir a vazão atual (ml/hr).</h1>
      <br>
-  <input type="text" id="VazaoAtual" name="VazaoAtual" placeholder="Inserir a vazão atual (ml/hr)">
+  <input type="number" id="VazaoAtual" step="0.5" min="0.5" max="50.0"name="VazaoAtual" placeholder="Inserir a vazão atual">
    <button id="DiferencaHgt">Calcular</button>
    </h1>
      
@@ -57,16 +55,16 @@
   <div class="caixa-mensagem">
     <h1><div id="mensagem-manutencao"></div></h1>
   </div>
-</div>
+  </div>
+  </body>
   <footer>
-  <div id="Contato">
+    <div id="Contato">
     <p>Para sugestões, entre em contato:</p>
     <p><a href="mailto:contato@projeto.com.br">contato@projeto.com.br</a></p>
     <p>&copy; Peter Willian's Cipriano. Todos os direitos reservados.</p>
-  </div>
-</footer>
+    </div>
+  </footer>
   <script src="JavaScript.js"></script>
-</body>
 </html>
 
     
