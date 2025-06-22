@@ -5,15 +5,15 @@
 function calcularUmDelta(vazaoAtual) {
     if (vazaoAtual < 3) {
         return 0.5;
-    } else if (vazaoAtual >= 3 && vazaoAtual <= 6) {
+    } else if (vazaoAtual >= 3 && vazaoAtual <= 6.9) {
         return 1.0;
-    } else if (vazaoAtual >= 7 && vazaoAtual <= 10) {
+    } else if (vazaoAtual >= 7 && vazaoAtual <= 10.9) {
         return 1.5;
-    } else if (vazaoAtual >= 11 && vazaoAtual <= 15) {
+    } else if (vazaoAtual >= 11 && vazaoAtual <= 15.9) {
         return 2.0;
-    } else if (vazaoAtual >= 16 && vazaoAtual <= 20) {
+    } else if (vazaoAtual >= 16 && vazaoAtual <= 20.9) {
         return 3.0;
-    } else if (vazaoAtual >= 21 && vazaoAtual <= 25) {
+    } else if (vazaoAtual >= 21 && vazaoAtual <= 25.9) {
         return 4.0;
     } else if (vazaoAtual > 25) {
         return 'avisar o médico'; // Retorna string quando a vazão for alta para 1 Delta
