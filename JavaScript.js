@@ -1,3 +1,27 @@
+function atualizarDataHora() {
+  const agora = new Date();
+  const opcoesData = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const opcoesHora = { hour: '2-digit', minute: '2-digit', hour12: false };
+
+  const dataFormatada = agora.toLocaleDateString('pt-BR', opcoesData);
+  const horaFormatada = agora.toLocaleTimeString('pt-BR', opcoesHora);
+
+  const diaDaSemana = dataFormatada.split(',')[0];
+  const restoDaData = dataFormatada.split(',')[1];
+
+  const dataFormatadaMaiuscula = `${diaDaSemana.charAt(0).toUpperCase() + diaDaSemana.slice(1)}${restoDaData}`;
+
+  document.getElementById("data-hora").innerText = `${dataFormatadaMaiuscula} às ${horaFormatada}`;
+}
+
+setInterval(atualizarDataHora, 1000); // atualiza a cada segundo
+atualizarDataHora(); // chama a função uma vez para inicializar a data e hora
+
+// Chama a função imediatamente para exibir a data e hora iniciais
+atualizarDataHora();
+
+// Atualiza a data e hora a cada segundo (1000 milissegundos)
+setInterval(atualizarDataHora, 1000);
 // AQUI: COLOCAR AS FUNÇÕES calcularUmDelta e calcularDoisDelta NO INÍCIO DO ARQUIVO.
 // Elas precisam estar fora de qualquer 'document.addEventListener' para serem acessíveis.
 
@@ -362,3 +386,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+

@@ -199,3 +199,27 @@ input {
     max-width: 100%;
     white-space: normal; /* Evita cortes */
 }
+quadroCor {
+
+
+}
+.vermelho.ativo{
+    background-color: red;
+}
+
+.amarelo.ativo{
+    background-color: yellow;
+
+}
+
+.verde.ativo{
+    background-color: green;
+
+}
+.sinaleira{
+    width: 100px;
+    margin: 0 auto 20px;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    }
